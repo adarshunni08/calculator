@@ -35,3 +35,14 @@ function operation(num1, op, num2){
         console.log("Invalid Operation")
     }
 };
+
+const number = document.querySelectorAll('.btn')
+const display = document.querySelector('.screen')
+for (let i=0; i<number.length; i++){
+    number[i].addEventListener('click', () => {
+        display.textContent = number[i].textContent
+    })
+}
+
+const clear = document.querySelector('.clear')
+clear.addEventListener('click', () => display.textContent = 0)
